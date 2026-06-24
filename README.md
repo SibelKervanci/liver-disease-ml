@@ -1,4 +1,3 @@
-I.
 # An Interpretable Ensemble ML Pipeline for Dual-Task Liver Disease Prediction: Prognosis and Diagnosis
 
 This repository contains the source code for a leakage-free, interpretable machine learning pipeline that addresses two clinical tasks at once: **survival prognosis** in cirrhosis patients and **diagnostic classification** of liver disease. The pipeline combines strict fold-confined preprocessing, ensemble learning, Bayesian hyperparameter optimization, dual-level interpretability (SHAP + LIME), and an explicit data-leakage ablation that quantifies the accuracy inflation behind many optimistic results reported in the literature.
