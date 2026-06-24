@@ -1,17 +1,20 @@
 # =============================================================================
-#  LEAKAGE COMPARISON — ANA PIPELINE ILE BIREBIR (ILPD)
+# =============================================================================
+#  HYPERPARAMETER OPTIMIZATION — EXPLORATORY (Bayesian Search)
 #
-#  Bu kod, cirrhosis_ILDP_clean_pipeline.py ile AYNI yapidadir:
-#    - Ayni feature selection (get_sel: KNN k=8, MLP k=10)
-#    - Ayni TabNet, Voting, Stacking, Blending, Blending+TabNet
-#    - Ayni hiperparametreler (ds2)
+#  This script was used to find the optimal hyperparameters reported in the
+#  paper. The resulting values are hard-coded in fixed_pipeline.py.
 #
-#  TEK FARK: SMOTE'un konumu
-#    CLEAN  = SMOTE pipeline icinde, sadece train fold'da (ana kod = bu)
-#    LEAKY  = SMOTE split ONCESI tum veriye uygulanir (sizinti)
+#  NOTE: Running this script is NOT required to reproduce paper results.
+#  Use fixed_pipeline.py for that purpose.
 #
-#  Bu sayede CLEAN sonuclari ana pipeline'inizla BIREBIR ayni cikar.
-#  Sadece ILPD (DS2) uzerinde calisir — leakage demonstrasyonu icin.
+#  Due to the stochastic nature of Bayesian optimization, re-running this
+#  script may produce slightly different parameter values. This is expected
+#  behaviour and does not affect the reproducibility of reported results.
+#
+#  Datasets: cirrhosis.csv (DS1), ILPD.csv (DS2)
+#  Search library: [scikit-optimize / Optuna — whichever you used]
+# =============================================================================
 # =============================================================================
 
 import warnings, logging, sys, io
